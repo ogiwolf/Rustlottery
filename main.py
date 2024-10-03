@@ -18,7 +18,7 @@ filtered_players = {k: v for k, v in players.items() if v['playtime'] + v['afkTi
 print("Players with playtime + afkTime greater than 36000:")
 for steam_id, player_info in filtered_players.items():
     total_time = player_info['playtime'] + player_info['afkTime']
-    print(f"Steam ID: {steam_id}, Display Name: {player_info['displayName']}, Total Time: {total_time}")
+    print(f"Display Name: {player_info['displayName']}, Total Time: {total_time}")
 
 # Count the number of players meeting the criteria
 player_count = len(filtered_players)
@@ -31,7 +31,6 @@ if filtered_players:
     total_time = random_player_info['playtime'] + random_player_info['afkTime']
 
     print("\nRandomly selected player:")
-    print(
-        f"Steam ID: {random_player_id}, Display Name: {random_player_info['displayName']}, Total Time: {total_time}")
+    print(f"Display Name: {random_player_info['displayName']}, Total Time: {total_time}")
 else:
     print("\nNo players with playtime + afkTime greater than 36000 found.")
